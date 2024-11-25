@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+    font-size: 15px;
+    user-select: none;
+}
+
+
+.container-full{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.top-logo{
+    width: 100%;
+    height: 20%;
+    background-color: #38b6ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img{
+    height: 100%;
+    overflow: hidden;
+}
+
+.img img{
+    height: 95%;
+    width: auto;
+}
+
+.container-body{
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4%;
+    
+}
+
+.img-inner{
+    width: 3.3em;
+    height: 3.3em;
+}
+
+.container-body input{
+    width: 80%;
+    padding-left: 3%;
+    margin-top: 2%;
+    height: 10%;
+    border-radius: 50px;
+    border: 2.4px solid #00bfa5;
+}
+
+.direction{
+    display: flex;
+    align-items: center;
+    width: 80%;
+    gap: 4%;
+}
+
+.direction-text-first{
+    font-size: 18px;
+}
+
+.line{
+    width: 80%;
+    height: 2%;
+    background-color: #ebebeb;
+}
+
+.most-visited{
+    width: 80%;
+}
+
+.most-visited-content{
+    display: flex;
+    width: 80%;
+    align-items: center;
+    gap: 5%;
+    height: 10%;
+}
+
+.most-visited-text-container{
+    height: 100%;
+    width: 90%;
+    border-bottom: 2px solid #231f20; 
+    display: flex;
+    align-items: center;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jockey+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container-full">
+      <div class="top-logo">
+        <div class="img">
+          <img src="../assets/logoProject.png" />
+        </div>
+      </div>
+      <div class="container-form">
+        <div class="body-form">
+          <div class="heading-login"><h1>Log In!</h1></div>
+          <div class="para mt-4">
+            <p>
+              Navigate your way through VIT Bhopal with ease. Explore every
+              corner of the campus effortlessly with our smart guide!
+            </p>
+          </div>
+          <div class="email mt-6">
+            <label for="email-input "><b>Email</b><span>*</span></label>
+            <input
+              type="text"
+              id="email-input"
+              class="input"
+              placeholder="Enter your mail address"
+            />
+          </div>
+          <div class="password mt-4">
+            <label for="password-input "><b>Password</b><span>*</span></label>
+            <input
+              type="password"
+              id="password-input"
+              class="input"
+              placeholder="Enter password"
+            />
+          </div>
+          <div class="rem-forget mt-4">
+            <div class="rem-me">
+              <input type="checkbox" id="rem-text" />
+              <label for="rem-text"><b>Remember me</b></label>
+            </div>
+            <div class="forgot-pass">
+              <a href="#">Forgot your password?</a>
+            </div>
+          </div>
+          <div class="button-login mt-4 scale">
+            <button>LogIn</button>
+          </div>
+          <div class="or-login-google mt-4">
+            <div class="line"></div>
+            <div class="or-login-google-content">Or, login with</div>
+            <div class="line"></div>
+          </div>
+          <div class="button-google mt-4 scale">
+            <img src="../assets/googlePNG.png" />
+            <p>Sign up with google</p>
+          </div>
+          <div class="register mt-6">
+            <p>Don't have an account? <a href="#">Register here</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
