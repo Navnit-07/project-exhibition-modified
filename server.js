@@ -8,6 +8,7 @@ const PORT = 3000;
 app.use('/login', express.static(path.join(__dirname, 'Login_Page')));
 app.use('/3', express.static(path.join(__dirname, 'Page3-searchLocation')));
 app.use('/4', express.static(path.join(__dirname, 'Page4-searchLocation-2')));
+app.use('/home',express.static(path.join(__dirname,'Page2-map')))
 
 // Serve static files from the assets directory
 app.use('/assets', express.static(path.join(__dirname, 'assets')));
@@ -27,6 +28,9 @@ app.get('/3', (req, res) => {
 app.get('/4', (req, res) => {
     res.sendFile(path.join(__dirname, 'Page4-searchLocation-2', 'index.html'));
   });
+app.get('/home', (req, res) => {
+  res.sendFile(path.join(__dirname, 'Page2-map', 'index.html'));
+});
 
 // Start the server
 app.listen(PORT, () => {
