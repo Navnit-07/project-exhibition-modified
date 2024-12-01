@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *{
     margin: 0;
     padding: 0;
@@ -165,4 +166,124 @@ h1{
 .map img{
     height: 120%;
     width: 100%;
+=======
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+    font-size: 15px;
+    user-select: none;
+}
+
+h1{
+    font-size: 30px;
+}
+
+.mt-4{
+    margin-top: 4%;
+}
+.mt-6{
+    margin-top: 6%;
+}
+
+.container-full{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container-body{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url("../assets/backgroundMap.png");
+    background-size: contain;
+}
+
+.top-logo{
+    width: 100%;
+    height: 20%;
+    background-color: #38b6ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img{
+    height: 100%;
+    overflow: hidden;
+}
+
+.img img{
+    height: 95%;
+    width: auto;
+}
+
+.search{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+}
+
+.search input{
+    width: 80%;
+    padding-left: 3%;
+    margin-top: 0.5%;
+    height: 65%;
+    border-radius: 50px;
+    border: 2.4px solid #00bfa5;
+}
+
+.chat-bot{
+    height: 15%;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+
+.chat-bot img{
+    width: 4%;
+}
+
+.footer{
+    width: 100%;
+    height: 15%;
+    background-color: #38b6ff;
+}
+
+.img{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.floor-number{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+}
+
+.floor-number img{
+    height: 90%;
+}
+
+.map{
+    width: 50%;
+    height: 50%;
+>>>>>>> e7c8f5e3f30e2aefd2ca1ac4f4949c1611e4949a
 }
