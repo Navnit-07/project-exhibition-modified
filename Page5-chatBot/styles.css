@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+    font-size: 15px;
+    user-select: none;
+    overflow: hidden;
+}
+
+
+.container-full{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.top-logo{
+    width: 100%;
+    height: 15%;
+    background-color: #38b6ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img{
+    height: 100%;
+    overflow: hidden;
+}
+
+.img img{
+    height: 95%;
+    width: auto;
+}
+
+.container-body{
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4%;
+    
+}
+
+.chats{
+    height: 80%;
+    width: 100%;
+}
+
+.img-chat{
+    width: 3%;
+    height: 3%;
+}
+
+.bot{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1%;
+    margin-left: 3%;
+}
+
+.user{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin-right: 3%;
+}
+
+p{
+    background-color: #ebebeb;
+    width: fit-content;
+    padding: 1.5%;
+    border-radius: 5px;
+    margin-top: 1%;
+}
+
+
+.footer{
+    background-color: #38b6ff;
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0% 4%;
+}
+
+.footer img{
+    height: 40px;
+    width: 40px;
+}
+
+.type-message{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1%;
+}
+
+.type-message img{
+    height: 50px;
+    width: 50px;
+}
+
+.type-message input{
+    background-color: #38b6ff;
+    color: white;
+    border: none;
+    font-size: 20px;
+    padding-left: 1%;
+    width: 50%;
+    height: 60%;
+
+}
+
+input::-webkit-input-placeholder { /* Chrome, Safari, Edge */
+    color: white;
+}
+
+input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: white;
+}
+
+input::-ms-input-placeholder { /* Microsoft Edge */
+    color: white;
+}
+
+.type-message input:focus{
+    border: 2px solid white;
+    outline: none;
+    border-radius: 5px;
+}
