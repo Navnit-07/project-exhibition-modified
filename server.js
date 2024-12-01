@@ -24,6 +24,7 @@ app.use('/home', express.static(path.join(__dirname, 'Page2-map')));
 // Serve static files from the assets directory
 app.use('/assets', express.static(path.join(__dirname, 'assets')));
 
+
 // Middleware for session handling
 app.use(session({
   secret: 'your-session-secret',
