@@ -5,7 +5,7 @@ const app = express();
 const PORT = 3000;
 
 // Serve static files from each page directory
-app.use('/login', express.static(path.join(__dirname, 'Login Page')));
+app.use('/login', express.static(path.join(__dirname, 'Login_Page')));
 app.use('/3', express.static(path.join(__dirname, 'Page3-searchLocation')));
 app.use('/4', express.static(path.join(__dirname, 'Page4-searchLocation-2')));
 
@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/login', (req, res) => {
-  res.sendFile(path.join(__dirname, 'Login Page', 'index.html'));
+  res.sendFile(path.join(__dirname, 'Login_Page', 'index.html'));
 });
 
 app.get('/3', (req, res) => {
