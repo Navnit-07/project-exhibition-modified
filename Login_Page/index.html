@@ -33,6 +33,22 @@
             <img src="/assets/googlePNG.png" />
             <p>Sign up with google</p>
           </div>
+          <!-- Display error message if login failed -->
+  <div id="error-message" style="color: red; display: none;">
+    Access restricted.
+  </div>
+
+  <script>
+    // Check if the URL contains the error query parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const error = urlParams.get('error');
+
+    // If there is an error, show the error message
+    if (error) {
+      document.getElementById('error-message').style.display = 'block';
+    }
+  </script>
+          
 
           
           
