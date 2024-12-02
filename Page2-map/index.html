@@ -28,7 +28,34 @@
             <img class="img-temp-user" src="../assets/Temporary-user.png" >
         </div>
         <div class="map">
-            <img src="../assets/Floor 0.svg" alt="">
+          <div class="text-black font-extrabold text-xl">Ground Floor</div>
+          <object
+            id="floor-map"
+            data="Floor 0.svg"
+            type="image/svg+xml"
+            class="w-[100%] h-[100%] border border-gray-300 shadow-lg"
+          >kkkkk</object>
+        
+          <div
+            id="room-details"
+            class="hidden absolute top-10 left-10 w-80 bg-white border border-gray-300 shadow-lg rounded-lg p-4 z-10"
+          >
+            <button
+              id="close-details"
+              class="mb-4 px-3 py-2 bg-red-500 text-white rounded-md hover:bg-red-600"
+            >
+              Close
+            </button>
+            <div id="details-content" class="text-sm text-gray-800"></div>
+            <button
+            id="teacher-link"
+            class="mt-4 px-3 py-2 bg-green-500 text-blue-700 rounded-md hover:bg-green-600"
+            style="display:none;"
+          >
+            View Teacher Details
+          </button>
+          <div id="teacher-details" class="mt-4 text-sm text-gray-700 max-h-[400px] overflow-y-auto p-4 border border-gray-300 bg-gray-50 shadow-lg" ></div>
+        </div>
         </div>
         <div class="chat-bot">
             <img src="../assets/chatBot.png" alt="" srcset="">
@@ -55,6 +82,9 @@
         </div>
       </div>
     </div>
+    <script src="Groundindex.js"></script>
+
     <script src="script.js"></script>
+    
   </body>
 </html>
