@@ -1,7 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Select all floor number images
   const floorNumbers = document.querySelectorAll('.floor-number img');
-  let activeElement = null; // Keep track of the currently active element
+  const defaultFloorId = '0'; // Default active floor ID
+  let activeElement = document.getElementById(defaultFloorId); // Default active element
+
+  // Set the initial hover-active class on the default element
+  activeElement.classList.add('hover-active');
 
   floorNumbers.forEach((img) => {
     img.addEventListener('click', () => {
