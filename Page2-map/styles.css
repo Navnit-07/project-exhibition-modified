@@ -149,7 +149,7 @@ h1{
     height: 88%;
 }
 
-.floor-number img:hover{
+.floor-number img.hover-active{
     box-shadow: #00bfa5;
     box-shadow: 0 6px 15px #87CEEB;
     border-radius: 8px;
