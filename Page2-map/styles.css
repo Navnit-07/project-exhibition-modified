@@ -150,8 +150,7 @@ h1{
 }
 
 .floor-number img.hover-active{
-    box-shadow: #00bfa5;
-    box-shadow: 0 6px 15px #87CEEB;
+    box-shadow: 0 6px 15px #00bfa5;
     border-radius: 8px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
