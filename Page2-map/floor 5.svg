@@ -62,6 +62,19 @@
       .cls-13 {
         font-size: 7.5px;
       }
+      .room {
+  cursor: pointer; /* Pointer on hover */
+  transition: fill 0.3s ease; /* Smooth transition for color changes */
+}
+
+.room:hover,
+.room.active {
+  fill: #3b82f6; /* Hover or active fill color (blue) */
+}
+
+#room-details {
+  display: none; /* Hidden by default */
+}
     </style>
   </defs>
   <!-- Generator: Adobe Illustrator 28.6.0, SVG Export Plug-In . SVG Version: 1.2.0 Build 709)  -->
@@ -84,24 +97,24 @@
       <path class="cls-4" d="M188.5,120.6"/>
       <line class="cls-4" x1="393.3" y1="313" x2="392.4" y2="162.3"/>
       <path class="cls-4" d="M459,162.3"/>
-      <rect class="cls-4" x="137.9" y="113.8" width="7.5" height="13.6"/>
-      <rect class="cls-4" x="234.2" y="114.1" width="7.5" height="13.6"/>
-      <rect class="cls-4" x="259" y="114.1" width="7.5" height="13.6"/>
-      <rect class="cls-4" x="279.6" y="114.1" width="7.5" height="13.6"/>
-      <rect class="cls-4" x="303" y="113.8" width="7.5" height="13.6"/>
-      <rect class="cls-4" x="347.2" y="114.1" width="7.5" height="13.6"/>
-      <rect class="cls-4" x="372.4" y="114.1" width="7.5" height="13.6"/>
-      <rect class="cls-4" x="410.6" y="113.8" width="7.5" height="13.6"/>
-      <rect class="cls-4" x="493.9" y="113.8" width="7.5" height="13.6"/>
-      <rect class="cls-4" x="130.5" y="350.4" width="7.5" height="13.6"/>
-      <rect class="cls-4" x="243.5" y="352.4" width="7.5" height="13.6"/>
-      <rect class="cls-4" x="268.7" y="352.7" width="7.5" height="13.6"/>
-      <rect class="cls-4" x="286.5" y="352.4" width="7.5" height="13.6"/>
-      <rect class="cls-4" x="303.5" y="352.4" width="7.5" height="13.6"/>
-      <rect class="cls-4" x="347.8" y="352.6" width="7.5" height="13.6"/>
-      <rect class="cls-4" x="373" y="352.6" width="7.5" height="13.6"/>
-      <rect class="cls-4" x="410.2" y="352.4" width="7.5" height="13.6"/>
-      <rect class="cls-4" x="495.4" y="352.4" width="7.5" height="13.6"/>
+      <rect id="room512" class="cls-4 room" x="137.9" y="113.8" width="7.5" height="13.6"/>
+      <rect id="room513" class="cls-4 room" x="234.2" y="114.1" width="7.5" height="13.6"/>
+      <rect id="room514" class="cls-4 room" x="259" y="114.1" width="7.5" height="13.6"/>
+      <rect id="room515" class="cls-4 room" x="279.6" y="114.1" width="7.5" height="13.6"/>
+      <rect id="room516" class="cls-4 room" x="303" y="113.8" width="7.5" height="13.6"/>
+      <rect id="room517" class="cls-4 room" x="347.2" y="114.1" width="7.5" height="13.6"/>
+      <rect id="room518" class="cls-4 room" x="372.4" y="114.1" width="7.5" height="13.6"/>
+      <rect id="room519" class="cls-4 room" x="410.6" y="113.8" width="7.5" height="13.6"/>
+      <rect id="room520" class="cls-4 room" x="493.9" y="113.8" width="7.5" height="13.6"/>
+      <rect id="room504" class="cls-4 room" x="130.5" y="350.4" width="7.5" height="13.6"/>
+      <rect id="room503" class="cls-4 room" x="243.5" y="352.4" width="7.5" height="13.6"/>
+      <rect id="room502" class="cls-4 room" x="268.7" y="352.7" width="7.5" height="13.6"/>
+      <rect id="room501" class="cls-4 room" x="286.5" y="352.4" width="7.5" height="13.6"/>
+      <rect id="room532" class="cls-4 room" x="303.5" y="352.4" width="7.5" height="13.6"/>
+      <rect id="room531" class="cls-4 room" x="347.8" y="352.6" width="7.5" height="13.6"/>
+      <rect id="room530" class="cls-4 room" x="373" y="352.6" width="7.5" height="13.6"/>
+      <rect id="room529" class="cls-4 room" x="410.2" y="352.4" width="7.5" height="13.6"/>
+      <rect id="room528" class="cls-4 room" x="495.4" y="352.4" width="7.5" height="13.6"/>
       <text class="cls-12" transform="translate(130.2 373.5)"><tspan x="0" y="0">504</tspan></text>
       <text class="cls-12" transform="translate(241.7 373.5)"><tspan x="0" y="0">503</tspan></text>
       <text class="cls-12" transform="translate(266.5 373.8)"><tspan x="0" y="0">502</tspan></text>
@@ -120,21 +133,21 @@
       <text class="cls-12" transform="translate(368.6 111.2)"><tspan x="0" y="0">518</tspan></text>
       <text class="cls-12" transform="translate(408.1 111.2)"><tspan x="0" y="0">519</tspan></text>
       <text class="cls-12" transform="translate(491.4 111.3)"><tspan x="0" y="0">520</tspan></text>
-      <rect class="cls-4" x="210.3" y="317.6" width="6.5" height="10.2"/>
-      <rect class="cls-7" x="266.3" y="284.9" width="6.5" height="17.8" transform="translate(563.4 24.3) rotate(90)"/>
-      <rect class="cls-4" x="179.2" y="272.4" width="6.5" height="10.2" transform="translate(459.9 95.1) rotate(90)"/>
-      <rect class="cls-4" x="217.5" y="254.7" width="11.9" height="6.1"/>
-      <rect class="cls-4" x="217.5" y="228.5" width="11.9" height="6.1"/>
-      <rect class="cls-4" x="217.5" y="217.2" width="11.9" height="6.1"/>
-      <rect class="cls-7" x="260.6" y="191.4" width="14.8" height="6.1"/>
-      <rect class="cls-4" x="207.7" y="163" width="11.9" height="6.1" transform="translate(379.7 -47.6) rotate(90)"/>
-      <rect class="cls-4" x="390" y="286.7" width="6.5" height="14.3" transform="translate(687.1 -99.4) rotate(90)"/>
-      <rect class="cls-4" x="386.1" y="191.4" width="11.9" height="6.1"/>
-      <rect class="cls-4" x="423.8" y="254.7" width="11.9" height="6.1"/>
-      <rect class="cls-4" x="423.8" y="228.5" width="11.9" height="6.1"/>
-      <rect class="cls-4" x="423.8" y="217.2" width="11.9" height="6.1"/>
-      <rect class="cls-4" x="429.8" y="162.9" width="11.9" height="6.1" transform="translate(601.7 -269.8) rotate(90)"/>
-      <rect class="cls-4" x="434.8" y="317.9" width="11.9" height="6.1" transform="translate(761.7 -119.8) rotate(90)"/>
+      <rect id="room505" class="cls-4 room" x="210.3" y="317.6" width="6.5" height="10.2"/>
+      <rect id="room506" class="cls-7 room" x="266.3" y="284.9" width="6.5" height="17.8" transform="translate(563.4 24.3) rotate(90)"/>
+      <rect id="room507" class="cls-4 room" x="179.2" y="272.4" width="6.5" height="10.2" transform="translate(459.9 95.1) rotate(90)"/>
+      <rect id="room508" class="cls-4 room" x="217.5" y="254.7" width="11.9" height="6.1"/>
+      <rect id="room509A" class="cls-4 room" x="217.5" y="228.5" width="11.9" height="6.1"/>
+      <rect id="room509B" class="cls-4 room" x="217.5" y="217.2" width="11.9" height="6.1"/>
+      <rect id="room510" class="cls-7 room" x="260.6" y="191.4" width="14.8" height="6.1"/>
+      <rect id="room511" class="cls-4 room" x="207.7" y="163" width="11.9" height="6.1" transform="translate(379.7 -47.6) rotate(90)"/>
+      <rect id="room526" class="cls-4 room" x="390" y="286.7" width="6.5" height="14.3" transform="translate(687.1 -99.4) rotate(90)"/>
+      <rect id="room522" class="cls-4 room" x="386.1" y="191.4" width="11.9" height="6.1"/>
+      <rect id="room525" class="cls-4 room" x="423.8" y="254.7" width="11.9" height="6.1"/>
+      <rect id="room524" class="cls-4 room" x="423.8" y="228.5" width="11.9" height="6.1"/>
+      <rect id="room523" class="cls-4 room" x="423.8" y="217.2" width="11.9" height="6.1"/>
+      <rect id="room521" class="cls-4 room" x="429.8" y="162.9" width="11.9" height="6.1" transform="translate(601.7 -269.8) rotate(90)"/>
+      <rect id="room527" class="cls-4 room" x="434.8" y="317.9" width="11.9" height="6.1" transform="translate(761.7 -119.8) rotate(90)"/>
       <text class="cls-12" transform="translate(197.3 223.1)"><tspan x="0" y="0">509B</tspan></text>
       <text class="cls-12" transform="translate(197.5 233.9)"><tspan x="0" y="0">509A</tspan></text>
       <text class="cls-12" transform="translate(201.4 260.8)"><tspan x="0" y="0">508</tspan></text>
@@ -313,13 +326,8 @@
       <path class="cls-4" d="M523.3,301.3c-11.3,0-17.5,0-17.5,0"/>
       <polygon class="cls-2" points="504.6 329.2 504.6 324.3 504.6 319.4 522.1 319.4 522.1 324.3 522.1 329.2 504.6 329.2"/>
       <path class="cls-4" d="M522.8,324.3c-11.3,0-17.5,0-17.5,0"/>
-      <text class="cls-10" transform="translate(221.6 217.1) rotate(90)"><tspan x="0" y="0">G</tspan></text>
-      <text class="cls-10" transform="translate(221.6 228.1) rotate(90)"><tspan x="0" y="0">G</tspan></text>
-      <text/>
-      <text class="cls-10" transform="translate(434.9 234.4) rotate(-90)"><tspan x="0" y="0">B</tspan></text>
-      <text class="cls-10" transform="translate(140.4 123.1)"><tspan x="0" y="0">T</tspan></text>
-      <text class="cls-10" transform="translate(497.9 362.3)"><tspan x="0" y="0">T</tspan></text>
-      <text class="cls-10" transform="translate(132.9 361.3)"><tspan x="0" y="0">T</tspan></text>
+      
+      
       <g>
         <rect class="cls-8" x="295.5" y="296.2" width="26" height="13"/>
         <path d="M321,296.7v12h-25v-12h25M322,295.7h-27v14h27v-14h0Z"/>
