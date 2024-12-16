@@ -7,21 +7,19 @@ const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const app = express();
 const PORT = 3000;
 
-// Set up Google OAuth credentials
-const GOOGLE_CLIENT_ID = '233894302148-srffcts6tr3ab61kjatiuonju10drb17.apps.googleusercontent.com';  // Replace with your actual client ID
-const GOOGLE_CLIENT_SECRET = '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';  // Replace with your actual client secret
+// Google OAuth credentials
+const GOOGLE_CLIENT_ID = '233894302148-srffcts6tr3ab61kjatiuonju10drb17.apps.googleusercontent.com'; // Replace with your actual client ID
+const GOOGLE_CLIENT_SECRET = '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'; // Replace with your actual client secret
 const CALLBACK_URL = 'http://localhost:3000/auth/google/callback';
 
-// Set your institution's domain
+// Institution domain restriction
 const INSTITUTION_DOMAIN = 'vitbhopal.ac.in';
 
-// Serve static files from each page directory
+// Serve static files for each page
 app.use('/login', express.static(path.join(__dirname, 'Login_Page')));
 app.use('/search', express.static(path.join(__dirname, 'Page3-searchLocation')));
 app.use('/4', express.static(path.join(__dirname, 'Page4-searchLocation-2')));
 app.use('/home', express.static(path.join(__dirname, 'Page2-map')));
-
-// Serve static files from the assets directory
 app.use('/assets', express.static(path.join(__dirname, 'assets')));
 
 // Middleware for session handling
@@ -41,40 +39,49 @@ passport.use(new GoogleStrategy({
   clientSecret: GOOGLE_CLIENT_SECRET,
   callbackURL: CALLBACK_URL,
 }, (accessToken, refreshToken, profile, done) => {
-  // Extract the email domain from the user's email address
   const emailDomain = profile.emails[0].value.split('@')[1];
 
-  // Check if the user's email domain matches the institution's domain
   if (emailDomain !== INSTITUTION_DOMAIN) {
     return done(null, false, { message: 'Access restricted to your institution\'s domain.' });
   }
 
-  // If the email domain matches, proceed with the authentication
-  return done(null, profile);
+  // Store relevant user information
+  const user = {
+    id: profile.id,
+    email: profile.emails[0].value,
+    photo: profile.photos[0].value, // Profile picture URL
+  };
+  return done(null, user);
 }));
 
 // Serialize and deserialize user
 passport.serializeUser((user, done) => done(null, user));
 passport.deserializeUser((user, done) => done(null, user));
 
-// Middleware to check for authentication
+// Middleware to check authentication
 function isAuthenticated(req, res, next) {
   if (req.isAuthenticated()) {
     return next();
-  } else {
-    res.redirect('/login');
   }
+  res.redirect('/login?error=true');
 }
 
-// Routes for pages
+// Routes
 app.get('/', (req, res) => {
-  res.redirect('/login'); // Redirect to the login page by default
+  res.redirect('/login');
 });
 
 app.get('/login', (req, res) => {
-  // If there is an error message, pass it to the login page
-  const errorMessage = req.query.error || '';
-  res.sendFile(path.join(__dirname, 'Login_Page', 'index.html'), { errorMessage });
+  const errorMessage = req.query.error ? 'Access restricted to institution accounts only.' : '';
+  res.send(`
+    <html>
+    <body>
+      <h1>Login Page</h1>
+      ${errorMessage ? `<p style="color: red;">${errorMessage}</p>` : ''}
+      <a href="/auth/google">Login with Google</a>
+    </body>
+    </html>
+  `);
 });
 
 app.get('/search', (req, res) => {
@@ -89,14 +96,19 @@ app.get('/home', isAuthenticated, (req, res) => {
   res.sendFile(path.join(__dirname, 'Page2-map', 'index.html'));
 });
 
-// Google login route
+// API to fetch user profile
+app.get('/api/user', isAuthenticated, (req, res) => {
+  res.json({
+    photo: req.user.photo, // Send only the profile picture URL
+  });
+});
+
+// Google OAuth routes
 app.get('/auth/google', passport.authenticate('google', {
-  scope: ['profile', 'email']
+  scope: ['profile', 'email'],
 }));
 
-// Google OAuth callback route
 app.get('/auth/google/callback', passport.authenticate('google', { failureRedirect: '/login?error=true' }), (req, res) => {
-  // If login is successful, redirect to the home page
   res.redirect('/home');
 });
 
