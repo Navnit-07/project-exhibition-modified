@@ -18,7 +18,7 @@ const INSTITUTION_DOMAIN = 'vitbhopal.ac.in';
 // Serve static files for each page
 app.use('/login', express.static(path.join(__dirname, 'Login_Page')));
 app.use('/search', express.static(path.join(__dirname, 'Page3-searchLocation')));
-app.use('/4', express.static(path.join(__dirname, 'Page4-searchLocation-2')));
+app.use('/direction', express.static(path.join(__dirname, 'Page4-searchLocation-2')));
 app.use('/home', express.static(path.join(__dirname, 'Page2-map')));
 app.use('/assets', express.static(path.join(__dirname, 'assets')));
 
@@ -88,7 +88,7 @@ app.get('/search', (req, res) => {
   res.sendFile(path.join(__dirname, 'Page3-searchLocation', 'index.html'));
 });
 
-app.get('/4', (req, res) => {
+app.get('/direction', (req, res) => {
   res.sendFile(path.join(__dirname, 'Page4-searchLocation-2', 'index.html'));
 });
 

@@ -32,4 +32,5 @@ document.addEventListener("DOMContentLoaded", () => {
     googleSignInButton.addEventListener("click", () => {
       window.location.href = "/search"; // Redirect to the desired page
     });
+    
   });

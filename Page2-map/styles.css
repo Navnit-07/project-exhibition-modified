@@ -165,3 +165,9 @@ h1{
     height: 120%;
     width: 100%;
 }
+/* Example of highlighting a room */
+.highlight {
+    stroke: #ff0000;  /* Red border or other styles */
+    stroke-width: 2;
+    fill: rgba(255, 0, 0, 0.3);  /* Optional fill for the room */
+}
