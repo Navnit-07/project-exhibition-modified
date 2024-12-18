@@ -29,12 +29,20 @@
                 <img src="../assets/locationPin.png" alt="">
             </div>
             <div class="center-container-inner">
-                <input type="text" placeholder="Choose start location">
-                <input type="text" placeholder="Choose destination">
+                <input id="start-location" type="text" placeholder="Choose start location">
+                <input id="destination" type="text" placeholder="Choose destination">
             </div>
             <div class="right-container-inner">
-                <img src="../assets/locationArrow.png" alt="">
+                <img id="submit-button" src="../assets/locationArrow.png" alt="Submit">
             </div>
+
+        </div>
+        <div id="svg-display">
+          <h2>Start Floor Map</h2>
+          <div id="start-floor-container" class="svg-container"></div>
+        
+          <h2>End Floor Map</h2>
+          <div id="end-floor-container" class="svg-container"></div>
         </div>
       
     </div>

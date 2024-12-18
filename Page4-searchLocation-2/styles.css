@@ -100,3 +100,17 @@
     width: 8em;
     height: 8em;
 }
+.svg-container {
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #f9f9f9;
+  }
+  
+  .svg-container svg {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  
