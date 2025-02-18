@@ -21,6 +21,7 @@ app.use('/search', express.static(path.join(__dirname, 'Page3-searchLocation')))
 app.use('/direction', express.static(path.join(__dirname, 'Page4-searchLocation-2')));
 app.use('/home', express.static(path.join(__dirname, 'Page2-map')));
 app.use('/assets', express.static(path.join(__dirname, 'assets')));
+app.use('/guest', express.static(path.join(__dirname, 'GuestLogin')));
 
 // Middleware for session handling
 app.use(session({
@@ -90,6 +91,10 @@ app.get('/search', (req, res) => {
 
 app.get('/direction', (req, res) => {
   res.sendFile(path.join(__dirname, 'Page4-searchLocation-2', 'index.html'));
+});
+
+app.get('/guest', (req, res) => {
+  res.sendFile(path.join(__dirname, 'GuestLogin', 'index.html'));
 });
 
 app.get('/home', isAuthenticated, (req, res) => {

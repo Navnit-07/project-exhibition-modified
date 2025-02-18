@@ -1,0 +1,173 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+    font-size: 15px;
+    user-select: none;
+}
+
+h1{
+    font-size: 30px;
+}
+
+.mt-4{
+    margin-top: 4%;
+}
+.mt-6{
+    margin-top: 6%;
+}
+
+.container-full{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.container-body{
+    width: 100%;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url("../assets/backgroundMap.png");
+    background-size: contain;
+}
+
+.top-logo{
+    width: 100%;
+    height: 15%;
+    background-color: #38b6ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img{
+    height: 100%;
+    overflow: hidden;
+}
+
+.img img{
+    height: 95%;
+    width: auto;
+}
+
+.search{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.search input{
+    width: 80%;
+    padding-left: 3.5%;
+    margin-top: 1%;
+    height: 65%;
+    border-radius: 50px;
+    border: 2.4px solid #00bfa5;
+}
+
+.search img{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+}
+
+.img-logo-star{
+    top: 26%;
+    left: 10.5%;
+}
+
+.img-temp-user{
+    top: 26%;
+    right: 10.5%;
+}
+
+.chat-bot{
+    height: 15%;
+    width: 98%;
+    display: flex;
+    justify-content: end;
+}
+
+
+.chat-bot img{
+    width: 4.5%;
+}
+
+.footer{
+    width: 100%;
+    height: 12%;
+    background-color: #38b6ff;
+}
+
+.imgfooter-container{
+    height: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 10%;
+}
+
+.img-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-footer p{
+    color: white;
+}
+
+.img-footer img{
+    width:3em;
+    height: 3em;
+}
+
+.floor-number{
+    width: 100%;
+    height: 17%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+}
+
+.floor-number img{
+    height: 88%;
+}
+
+.floor-number img.hover-active{
+    box-shadow: 0 6px 15px #00bfa5;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.map{
+    width: 70%;
+    height: 70%;
+    overflow: hidden;
+}
+
+.map img{
+    height: 120%;
+    width: 100%;
+}
+/* Example of highlighting a room */
+.highlight {
+    stroke: #ff0000;  /* Red border or other styles */
+    stroke-width: 2;
+    fill: rgba(255, 0, 0, 0.3);  /* Optional fill for the room */
+}
