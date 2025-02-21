@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // If the teacher name is not empty, proceed to fetch data
       if (teacherName) {
         try {
-          const response = await fetch(`http://127.0.0.1:5000/search_teacher?teacher_name=${teacherName}`);
+          const response = await fetch(`https://project-expo-backend-repo-production.up.railway.app/search_teacher?teacher_name=${teacherName}`);
           const data = await response.json();
 
           // Log the response data for debugging purposes

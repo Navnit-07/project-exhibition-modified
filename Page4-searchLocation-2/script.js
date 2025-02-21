@@ -9,7 +9,7 @@ document.getElementById('submit-button').addEventListener('click', async () => {
 
   // Send the start and destination to the backend to get the shortest path
   try {
-    const response = await fetch('http://127.0.0.1:5000/process_path', {  // Update URL here
+    const response = await fetch('https://project-expo-backend-repo-production.up.railway.app/process_path', {  // Update URL here
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
